@@ -8,6 +8,7 @@ import Avatar from 'components/Avatar';
 import OfflineForm from 'components/OfflineForm';
 import PrechatForm from 'components/PrechatForm';
 import ChatRating from 'components/ChatRating';
+import Carousel from './Carousel';
 
 class MessageList extends Component {
   constructor(props) {
@@ -51,8 +52,24 @@ class MessageList extends Component {
             message={msg}
           />
         );
-      case 'chat.rating':
-        return <ChatRating key={msg.type + msg.timestamp}/>;
+      case 'chat.request.rating':
+        // console.log(msg);
+        var carouselItems = [];
+        for (var i = 0; i < 10; i++) {
+          carouselItems.push(
+            <div className="carousel-item">
+              <ChatRating
+                key={msg.type + msg.timestamp + i}
+                agent={msg}
+              />
+            </div>
+          );
+        }
+        return (
+          <Carousel>
+            {carouselItems}
+          </Carousel>
+        );
       case 'offline':
         return <OfflineForm key="offline" />;
       case 'prechat':

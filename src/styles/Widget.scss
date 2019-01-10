@@ -576,6 +576,23 @@ svg {
     animation: sk-scaleout 1.0s infinite ease-in-out;
 }
 
+.carousel-container {
+    height: auto;
+    width: inherit;
+    outline-style: solid;
+    outline-color: red;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+
+.carousel-item {
+    width: 95%;
+    padding: 2.5%;
+    flex: 0 0 auto;
+}
+
 @-webkit-keyframes sk-scaleout {
     0% {
         transform: scale(0)

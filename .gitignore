@@ -34,3 +34,5 @@ bower_components/
 dist/
 
 vendor/web-sdk.js
+
+*.txt
