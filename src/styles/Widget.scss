@@ -585,6 +585,17 @@ svg {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
+
+    .button {
+        z-index: 0;
+        position: relative;
+        &--left {
+            // somthing
+        }
+        &--right {
+            // something
+        }
+    }
 }
 
 .carousel-item {
