@@ -57,10 +57,12 @@ class MessageList extends Component {
         var carouselItems = [];
         for (var i = 0; i < 10; i++) {
           carouselItems.push(
-            <ChatRating
-              key={msg.type + msg.timestamp + i}
-              agent={msg}
-            />
+            <div>
+              <ChatRating
+                key={`${msg.type}${msg.timestamp}${i}`}
+                agent={msg}
+              />
+            </div>
           );
         }
         return <Carousel items={carouselItems} />;

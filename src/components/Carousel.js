@@ -1,7 +1,6 @@
 'use strict';
 
 import React, { Component } from 'react';
-import { runInThisContext } from 'vm';
 
 class Carousel extends Component {
   constructor(props) {
@@ -13,23 +12,23 @@ class Carousel extends Component {
   }
 
   moveCarouselFoward = () => {
-    if (this.state.currentItem ===  this.totalItems - 1) {
-      this.setState({currentItem: 0});
+    if (this.state.currentItem === this.totalItems - 1) {
+      this.setState({ currentItem: 0 });
     } else {
-      this.setState({currentItem: this.state.currentItem + 1});
+      this.setState({ currentItem: this.state.currentItem + 1 });
     }
   }
 
   moveCarouselBack = () => {
     if (this.state.currentItem === 0) {
-      this.setState({currentItem: this.totalItems - 1});
+      this.setState({ currentItem: this.totalItems - 1 });
     } else {
-      this.setState({currentItem: this.state.currentItem - 1});
+      this.setState({ currentItem: this.state.currentItem - 1 });
     }
   }
 
   moveCarousel = () => {
-    this.refs[this.state.currentItem].scrollIntoView({behavior: 'smooth'});
+    this.refs[this.state.currentItem].scrollIntoView({ behavior: 'smooth' });
   }
 
   componentDidUpdate() {
@@ -38,12 +37,18 @@ class Carousel extends Component {
 
   render() {
     return (
-      <div>
-        <button onClick={this.moveCarouselBack}>prev</button>
-        <button onClick={this.moveCarouselFoward}>next</button>
+      <div className>
+        <button onClick={this.moveCarouselBack} className="carousel-button left">
+          prev
+        </button>
+        <button onClick={this.moveCarouselFoward} className="carousel-button right">
+          next
+        </button>
         <div className="carousel-container">
           {this.props.items.map((item, i) => (
-            <div className="carousel-item" ref={i} key={i}>{item}</div>
+            <div className="carousel-item" ref={i} key={i}>
+              {item}
+            </div>
           ))}
         </div>
       </div>

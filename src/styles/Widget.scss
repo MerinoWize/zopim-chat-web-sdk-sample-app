@@ -585,23 +585,26 @@ svg {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
-
-    .button {
-        z-index: 0;
-        position: relative;
-        &--left {
-            // somthing
-        }
-        &--right {
-            // something
-        }
-    }
 }
 
 .carousel-item {
     width: 95%;
     padding: 2.5%;
     flex: 0 0 auto;
+}
+
+.carousel-button {
+    z-index: 0;
+    position: relative;
+}
+
+.left {
+    // somthing
+    color: red;
+}
+.right {
+    // something
+    color: blue;
 }
 
 @-webkit-keyframes sk-scaleout {
