@@ -576,20 +576,29 @@ svg {
     animation: sk-scaleout 1.0s infinite ease-in-out;
 }
 
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: inherit;
+    text-align: center;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .carousel-container {
     height: auto;
-    width: inherit;
-    outline-style: solid;
-    outline-color: red;
     padding-bottom: 20px;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
+    // z-index: 0;
 }
 
 .carousel-item {
     width: 95%;
-    padding: 2.5%;
+    padding: 0 2.5% 0 2.5%;
     flex: 0 0 auto;
 }
 
@@ -599,11 +608,9 @@ svg {
 }
 
 .left {
-    // somthing
     color: red;
 }
 .right {
-    // something
     color: blue;
 }
 

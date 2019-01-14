@@ -37,12 +37,9 @@ class Carousel extends Component {
 
   render() {
     return (
-      <div className>
+      <div className='carousel-wrapper'>
         <button onClick={this.moveCarouselBack} className="carousel-button left">
-          prev
-        </button>
-        <button onClick={this.moveCarouselFoward} className="carousel-button right">
-          next
+        {'<'}
         </button>
         <div className="carousel-container">
           {this.props.items.map((item, i) => (
@@ -51,6 +48,9 @@ class Carousel extends Component {
             </div>
           ))}
         </div>
+        <button onClick={this.moveCarouselFoward} className="carousel-button right">
+          {'>'}
+        </button>
       </div>
     );
   }
