@@ -36,3 +36,4 @@ dist/
 vendor/web-sdk.js
 
 *.txt
+src/config/base.js
