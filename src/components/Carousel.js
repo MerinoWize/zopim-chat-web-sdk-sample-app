@@ -2,8 +2,36 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const CarouselWrapper = styled.div`
+    position: relative;
+    width: 100%;
+    height: inherit;
+    text-align: center;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  `;
+
+  const CarouselContainer = styled.div`
+    height: auto;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    // z-index: 0;
+`;
+
+const CarouselItem = styled.div`
+  width: 95%;
+  padding: 0 2.5% 0 2.5%;
+  flex: 0 0 auto;
+`;
 
 class Carousel extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -38,21 +66,21 @@ class Carousel extends Component {
 
   render() {
     return (
-      <div className='carousel-wrapper'>
-        <button onClick={this.moveCarouselBack} className="carousel-button left">
+      <CarouselWrapper>
+        <button onClick={this.moveCarouselBack}>
         {'<'}
         </button>
-        <div className="carousel-container">
+        <CarouselContainer>
           {this.props.items.map((item, i) => (
-            <div className="carousel-item" ref={i} key={i}>
+            <CarouselItem ref={i} key={i}>
               {item}
-            </div>
+            </CarouselItem>
           ))}
-        </div>
-        <button onClick={this.moveCarouselFoward} className="carousel-button right">
+        </CarouselContainer>
+        <button onClick={this.moveCarouselFoward}>
           {'>'}
         </button>
-      </div>
+      </CarouselWrapper>
     );
   }
 }

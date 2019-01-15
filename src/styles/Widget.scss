@@ -576,46 +576,6 @@ svg {
     animation: sk-scaleout 1.0s infinite ease-in-out;
 }
 
-.carousel-wrapper {
-    position: relative;
-    width: 100%;
-    height: inherit;
-    text-align: center;
-    display: inline-block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel-container {
-    height: auto;
-    padding-bottom: 20px;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    // z-index: 0;
-}
-
-.carousel-item {
-    width: 95%;
-    padding: 0 2.5% 0 2.5%;
-    flex: 0 0 auto;
-}
-
-.carousel-button {
-    z-index: 0;
-    position: relative;
-}
-
-.left {
-    color: red;
-    text-align: center;
-}
-.right {
-    color: green;
-    text-align: center;
-}
-
 @-webkit-keyframes sk-scaleout {
     0% {
         transform: scale(0)
