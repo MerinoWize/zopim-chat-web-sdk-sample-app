@@ -5,23 +5,22 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const CarouselWrapper = styled.div`
-    position: relative;
-    width: 100%;
-    height: inherit;
-    text-align: center;
-    display: inline-block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  `;
+  position: relative;
+  width: 100%;
+  height: inherit;
+  text-align: center;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
-  const CarouselContainer = styled.div`
-    height: auto;
-    padding-bottom: 20px;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    // z-index: 0;
+const CarouselContainer = styled.div`
+  height: auto;
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
 `;
 
 const CarouselItem = styled.div`
