@@ -6,6 +6,7 @@ import MessageSvg from 'components/MessageSvg';
 import ActionButton from 'components/ActionButton';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import zChat from 'vendor/web-sdk';
+import PropTypes from 'prop-types';
 
 class OfflineForm extends Component {
   constructor(props) {
@@ -98,8 +99,8 @@ class OfflineForm extends Component {
 
 OfflineForm.displayName = 'OfflineForm';
 OfflineForm.propTypes = {
-  onClick: React.PropTypes.func,
-  addClass: React.PropTypes.string
+  onClick: PropTypes.func,
+  addClass: PropTypes.string
 };
 
 export default OfflineForm;

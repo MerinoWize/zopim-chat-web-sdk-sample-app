@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class SystemMessage extends Component {
   constructor(props) {
@@ -31,7 +32,7 @@ class SystemMessage extends Component {
 
 SystemMessage.displayName = 'SystemMessage';
 SystemMessage.propTypes = {
-  message: React.PropTypes.object
+  message: PropTypes.object
 };
 SystemMessage.defaultProps = {
   message: {

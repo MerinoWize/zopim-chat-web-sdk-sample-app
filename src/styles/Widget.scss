@@ -609,9 +609,11 @@ svg {
 
 .left {
     color: red;
+    text-align: center;
 }
 .right {
-    color: blue;
+    color: green;
+    text-align: center;
 }
 
 @-webkit-keyframes sk-scaleout {

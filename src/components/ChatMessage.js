@@ -6,6 +6,7 @@ import Avatar from 'components/Avatar';
 import ChatMedia from 'components/ChatMedia';
 import { log } from 'utils';
 import zChat from 'vendor/web-sdk';
+import PropTypes from 'prop-types';
 
 class ChatMessage extends Component {
   constructor(props) {
@@ -82,9 +83,9 @@ class ChatMessage extends Component {
 
 ChatMessage.displayName = 'ChatMessage';
 ChatMessage.propTypes = {
-  message: React.PropTypes.object,
-  agent: React.PropTypes.object,
-  addClass: React.PropTypes.string
+  message: PropTypes.object,
+  agent: PropTypes.object,
+  addClass: PropTypes.string
 };
 ChatMessage.defaultProps = {
   message: {

@@ -1,6 +1,7 @@
 'use strict';
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Carousel extends Component {
   constructor(props) {
@@ -58,9 +59,9 @@ class Carousel extends Component {
 
 Carousel.displayName = 'Carousel';
 Carousel.propTypes = {
-  addClass: React.PropTypes.string,
-  contentAddClass: React.PropTypes.string,
-  items: React.PropTypes.array
+  addClass: PropTypes.string,
+  contentAddClass: PropTypes.string,
+  items: PropTypes.array
 }
 
 export default Carousel;

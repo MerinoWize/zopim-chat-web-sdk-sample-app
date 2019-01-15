@@ -9,6 +9,7 @@ import OfflineForm from 'components/OfflineForm';
 import PrechatForm from 'components/PrechatForm';
 import ChatRating from 'components/ChatRating';
 import Carousel from './Carousel';
+import PropTypes from 'prop-types';
 
 class MessageList extends Component {
   constructor(props) {
@@ -53,7 +54,8 @@ class MessageList extends Component {
           />
         );
       case 'chat.request.rating':
-        // console.log(msg);
+        // return <ChatRating key={msg.type + msg.timestamp}/>;
+      case 'chat.carousel':
         var carouselItems = [];
         for (var i = 0; i < 10; i++) {
           carouselItems.push(
@@ -146,10 +148,10 @@ class MessageList extends Component {
 
 MessageList.displayName = 'MessageList';
 MessageList.propTypes = {
-  messages: React.PropTypes.array,
-  agents: React.PropTypes.object,
-  isOffline: React.PropTypes.bool,
-  isChatting: React.PropTypes.bool
+  messages: PropTypes.array,
+  agents: PropTypes.object,
+  isOffline: PropTypes.bool,
+  isChatting: PropTypes.bool
 };
 MessageList.defaultProps = {
   messages: [],

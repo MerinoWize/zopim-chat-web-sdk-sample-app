@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import { isAgent } from 'utils';
+import PropTypes from 'prop-types';
 
 class Avatar extends Component {
   getVisitorSvg() {
@@ -36,7 +37,7 @@ class Avatar extends Component {
 
 Avatar.displayName = 'Avatar';
 Avatar.propTypes = {
-  entity: React.PropTypes.object
+  entity: PropTypes.object
 };
 
 export default Avatar;
