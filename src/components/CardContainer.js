@@ -2,6 +2,12 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const CardWrapper = styled.div`
+  padding-top: 16px;
+  position: relative;
+`;
 
 class CardContainer extends Component {
   constructor(props) {
@@ -20,13 +26,12 @@ class CardContainer extends Component {
 
   render() {
     return (
-      <div className={`card-container ${this.props.addClass}`}>
-        {this.renderIcon()}
-        <div className={`card-content ${this.props.contentAddClass}`}>
+      <CardWrapper>
+        <div className={'card-content'}>
           <div className="card-title">{this.props.title}</div>
           {this.props.children}
         </div>
-      </div>
+      </CardWrapper>
     );
   }
 }

@@ -83,9 +83,7 @@ class MessageList extends Component {
     return agent_names.map((agent) => {
       return (
         <div key={agent.nick} className="chat-msg-container agent">
-          <div className="avatar-container">
-            <Avatar entity={this.props.agents[agent.nick]} />
-          </div>
+          <Avatar entity={this.props.agents[agent.nick]} />
           <div className="chat-msg-wrapper">
             <div className="chat-msg">
               <div className="typing-indicator">

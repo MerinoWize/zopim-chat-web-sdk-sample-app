@@ -70,9 +70,7 @@ class ChatMessage extends Component {
   render() {
     return (
       <div className={`chat-msg-container ${this.getClassName(this.props.message)} ${this.props.addClass}`}>
-        <div className="avatar-container">
-          <Avatar entity={this.props.agent} />
-        </div>
+        <Avatar entity={this.props.agent} />
         <div className="chat-msg-wrapper">
           {this.renderMessagePart(this.props.message)}
         </div>

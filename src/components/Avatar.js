@@ -3,6 +3,15 @@
 import React, { Component } from 'react';
 import { isAgent } from 'utils';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const AvatarContainer = styled.div`
+  display: flex;
+  position: absolute;
+  .visitor & {
+      right: 0;
+  }
+`;
 
 class Avatar extends Component {
   getVisitorSvg() {
@@ -24,9 +33,11 @@ class Avatar extends Component {
     }
 
     return (
-      <div className="avatar" style={style} title={entity ? entity.display_name : 'Agent'}>
-        {child}
-      </div>
+      <AvatarContainer>
+        <div className="avatar" style={style} title={entity ? entity.display_name : 'Agent'}>
+          {child}
+        </div>
+      </AvatarContainer>
     );
   }
 

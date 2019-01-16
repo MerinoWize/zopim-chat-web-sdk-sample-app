@@ -182,7 +182,7 @@ svg {
 .chat-msg-container {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
+    justify-content: flex-end;
     margin-bottom: 16px;
     position: relative;
 
@@ -243,16 +243,6 @@ svg {
     background-size: cover;
 }
 
-.avatar-container {
-    display: inline-block;
-    position: absolute;
-    padding-bottom: 1px;
-
-    .visitor & {
-        right: 0;
-    }
-}
-
 .avatar {
     width: 32px;
     height: 32px;
@@ -289,11 +279,6 @@ svg {
     color: #BFBFBF;
 }
 
-.card-container {
-    padding-top: 16px;
-    position: relative;
-}
-
 .card-title {
     text-align: center;
     color: $theme-color;
@@ -314,7 +299,6 @@ svg {
 
 .card-content {
     color: #555555;
-    border-radius: 8px;
     border: 1px solid #DDDDDD;
     padding: 24px 16px 16px 16px;
     font-size: 14px;
