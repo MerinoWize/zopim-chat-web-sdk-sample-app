@@ -67,7 +67,13 @@ class MessageList extends Component {
             </div>
           );
         }
-        return <Carousel items={carouselItems} />;
+        return (
+          <Carousel
+            key={`carousel ${msg.timestamp}`}
+            agent={this.props.agents[msg.nick]}
+            items={carouselItems}
+          />
+        );
       case 'offline':
         return <OfflineForm key="offline" />;
       case 'prechat':
